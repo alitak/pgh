@@ -8,3 +8,11 @@
 .leaflet_map {
     height: 350px;
 }
+
+.app-header .navbar-brand {
+    width: 250px;
+    justify-content: left;
+    padding: 0 2.25rem;
+    font-size: 1.4rem;
+    opacity: .8;
+}

@@ -12,8 +12,8 @@ return [
     */
 
     // Date & Datetime Format Syntax: https://carbon.nesbot.com/docs/#api-localization
-    'default_date_format'     => 'D MMM YYYY',
-    'default_datetime_format' => 'D MMM YYYY, HH:mm',
+    'default_date_format' => 'YYYY MMM D',
+    'default_datetime_format' => 'YYYY. MMM D. HH:mm',
 
     // Direction, according to language
     // (left-to-right vs right-to-left)
@@ -24,14 +24,14 @@ return [
     // ----
 
     // Project name. Shown in the window title.
-    'project_name' => 'Backpack Admin Panel',
+    'project_name' => 'PlayGrounds Hungary Admin Panel',
 
     // When clicking on the admin panel's top-left logo/name,
     // where should the user be redirected?
     // The string below will be passed through the url() helper.
     // - default: '' (project root)
     // - alternative: 'admin' (the admin's dashboard)
-    'home_link' => '',
+    'home_link' => 'admin',
 
     // Content of the HTML meta robots tag to prevent indexing and link following
     'meta_robots_content' => 'noindex, nofollow',
@@ -63,7 +63,7 @@ return [
 
     // CSS files that are loaded in all pages, using Laravel's mix() helper
     'mix_styles' => [ // file_path => manifest_directory_path
-        // 'css/app.css' => '',
+        'css/app_admin.css' => '',
     ],
 
     // ------
@@ -71,13 +71,13 @@ return [
     // ------
 
     // Menu logo. You can replace this with an <img> tag if you have a logo.
-    'project_logo'   => '<b>Back</b>pack',
+    'project_logo' => '<i class="fa fa-shapes"></i> Play<strong>Grounds</strong>',
 
     // Show / hide breadcrumbs on admin panel pages.
     'breadcrumbs' => true,
 
     // Horizontal navbar classes. Helps make the admin panel look similar to your project's design.
-    'header_class' => 'app-header bg-light border-0 navbar',
+    'header_class' => 'app-header border-0 navbar navbar-color bg-dark',
     // For background colors use: bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
     // For links to be visible on different background colors use: "navbar-dark", "navbar-light", "navbar-color"
 
@@ -100,15 +100,15 @@ return [
     // ------
 
     // Footer element classes.
-    'footer_class' => 'app-footer d-print-none',
+    'footer_class' => 'app-footer d-print-none bg-dark',
     // hide it with d-none
     // change background color with bg-dark, bg-primary, bg-secondary, bg-danger, bg-warning, bg-success, bg-info, bg-blue, bg-light-blue, bg-indigo, bg-purple, bg-pink, bg-red, bg-orange, bg-yellow, bg-green, bg-teal, bg-cyan, bg-white
 
     // Developer or company name. Shown in footer.
-    'developer_name' => 'Cristian Tabacitu',
+    'developer_name' => 'Kukel Attila',
 
     // Developer website. Link in footer. Type false if you want to hide it.
-    'developer_link' => 'http://tabacitu.ro',
+    'developer_link' => 'https://github.com/alitak/',
 
     // Show powered by Laravel Backpack in the footer? true/false
     'show_powered_by' => true,
@@ -135,11 +135,19 @@ return [
         // 'https://unpkg.com/vue@2.4.4/dist/vue.min.js',
         // 'https://unpkg.com/react@16/umd/react.production.min.js',
         // 'https://unpkg.com/react-dom@16/umd/react-dom.production.min.js',
+
+        'https://kit.fontawesome.com/088cbb8c75.js',
+        'https://use.fontawesome.com/releases/v5.13.0/js/solid.js?v=ddbad4ebfec07d1b13faab7960ad89f67305adf6',
+        'https://use.fontawesome.com/releases/v5.13.0/js/fontawesome.js?v=ddbad4ebfec07d1b13faab7960ad89f67305adf6',
+//        'packages/ckeditor/ckeditor.js',
+//        'packages/ckeditor/adapters/jquery.js',
+//        'packages/places.js/dist/cdn/places.min.js',
+
     ],
 
     // JS files that are loaded in all pages, using Laravel's mix() helper
     'mix_scripts' => [// file_path => manifest_directory_path
-        // 'js/app.js' => '',
+        'js/app_admin.js' => '',
     ],
 
     // -------------
@@ -224,7 +232,7 @@ return [
     // Username column for authentication
     // The Backpack default is the same as the Laravel default (email)
     // If you need to switch to username, you also need to create that column in your db
-    'authentication_column'      => 'email',
+    'authentication_column' => 'email',
     'authentication_column_name' => 'Email',
 
     // The guard that protects the Backpack admin panel.
