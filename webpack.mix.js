@@ -11,5 +11,27 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .sass('resources/sass/app.scss', 'public/css');
+mix
+    // web
+    .js('resources/js/web/app_web.js', 'public/js')
+    .sass('resources/sass/web/app_web.scss', 'public/css')
+    // admin
+    .js('resources/js/admin/app_admin.js', 'public/js')
+    .sass('resources/sass/admin/app_admin.scss', 'public/css')
+;
+
+if (mix.inProduction()) {
+    mix.version();
+}
+
+// if (mix.inProduction()) {
+//     mix.version();
+// } else {
+//     mix.browserSync({
+//         ghostMode: false,
+//         proxy: {
+//             target: 'localhost:28080',
+//             ws: true
+//         }
+//     });
+// }
